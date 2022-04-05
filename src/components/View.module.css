@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
+
+.View {
+  margin: 1rem;
+  background-color: white;
+  height: 70vh;
+  width: 70vw;
+  position: relative;
+  color: black;
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 1.4rem;
+}
+
+.View p {
+  display: inline-block;
+  margin: 10px 0 10px 0px;
+}
+
+.Heading {
+  width: 130px;
+}
+.Line {
+  border-bottom: 2px solid black;
+  display: block;
+}
+
+.Margin {
+  border-left: 2px solid red;
+  display: block;
+  position: absolute;
+  left: 120px;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+}

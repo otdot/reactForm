@@ -1,0 +1,24 @@
+.Form {
+  height: 50vh;
+  margin: 1rem;
+}
+
+.Form label {
+  width: 120px;
+  display: inline-block;
+}
+
+.Form div {
+  display: block;
+  margin: 1rem 0;
+}
+
+.Form input {
+  width: 150px;
+}
+
+.Form select,
+.Form input[type="submit"] {
+  width: 158px;
+  margin-left: 120px;
+}
