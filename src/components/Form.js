@@ -4,6 +4,7 @@ import classes from "./Form.module.css";
 export const Form = (props) => {
   return (
     <form
+      name="submit"
       onSubmit={props.submit}
       onChange={props.change}
       className={classes.Form}

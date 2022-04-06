@@ -13,13 +13,34 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border: black 2px solid;
+  z-index: 1;
 }
 
 .Modal .Heading {
   display: inline-block;
-  margin: 10px 0;
+  width: 7rem;
+  margin: 10px 10px;
 }
 
 .Modal .Input {
   display: inline-block;
+}
+
+.sendButton,
+.cancelButton {
+  height: 2.5rem;
+  width: 12rem;
+  border: 0;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.sendButton {
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.cancelButton {
+  bottom: 1rem;
+  right: 1rem;
 }

@@ -1,6 +1,14 @@
 import React from "react";
-import classes from "./Button.module.css";
 
 export const Button = (props) => {
-  return <button className={classes.Button}>{props.text}</button>;
+  return (
+    <button
+      name={props.name}
+      style={{ backgroundColor: props.color }}
+      onClick={props.click}
+      className={props.style}
+    >
+      {props.text}
+    </button>
+  );
 };

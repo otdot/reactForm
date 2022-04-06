@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "./Button";
 import classes from "./Modal.module.css";
 
 export const Modal = (props) => {
@@ -32,6 +33,20 @@ export const Modal = (props) => {
         <p className={classes.Heading}>Game style: </p>
         <p className={classes.Input}>{props.moreinfo}</p>
       </div>
+      <Button
+        name="send"
+        click={props.click}
+        color="green"
+        style={classes.sendButton}
+        text="send"
+      />
+      <Button
+        name="cancel"
+        click={props.click}
+        color="tomato"
+        style={classes.cancelButton}
+        text="cancel"
+      />
     </div>
   );
 };

@@ -22,38 +22,23 @@ class App extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.nickname);
-    console.log(this.state.showModal);
-
-    this.setState({ showModal: true });
+    if (this.state.showModal === false) {
+      e.target.style.pointerEvents = "none";
+      this.setState({ showModal: !this.state.showModal });
+    } else {
+      e.target.parentNode.parentNode.children[1].style.pointerEvents = "auto";
+      this.setState({ showModal: !this.state.showModal });
+    }
   };
 
   render() {
     return (
       <div className="app">
+        {this.state.showModal && (
+          <Modal click={this.handleSubmit} {...this.state} />
+        )}
         <Form submit={this.handleSubmit} change={this.handleChange} />
-        <View
-          nickname={this.state.nickname}
-          favouritemap={this.state.favouritemap}
-          rank={this.state.rank}
-          telephone={this.state.telephone}
-          role={this.state.role}
-          moreinfo={this.state.moreinfo}
-        />
-        <div>
-          {this.state.showModal ? (
-            <Modal
-              nickname={this.state.nickname}
-              favouritemap={this.state.favouritemap}
-              rank={this.state.rank}
-              telephone={this.state.telephone}
-              role={this.state.role}
-              moreinfo={this.state.moreinfo}
-            />
-          ) : (
-            ""
-          )}
-        </div>
+        <View {...this.state} />
       </div>
     );
   }
