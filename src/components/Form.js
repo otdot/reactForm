@@ -37,7 +37,7 @@ export const Form = (props) => {
         <textarea name="moreinfo" id="moreinfo" type="text" />
       </div>
       <div>
-        <input type="submit" />
+        <input value="Send" type="submit" />
       </div>
     </form>
   );

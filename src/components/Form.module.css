@@ -6,6 +6,7 @@
 .Form label {
   width: 120px;
   display: inline-block;
+  color: white;
 }
 
 .Form div {
@@ -13,12 +14,24 @@
   margin: 1rem 0;
 }
 
-.Form input {
-  width: 150px;
+.Form input,
+.Form select,
+.Form textarea {
+  width: 12rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 5px;
+}
+
+.Form textarea {
+  height: 3rem;
 }
 
 .Form select,
 .Form input[type="submit"] {
-  width: 158px;
   margin-left: 120px;
+}
+
+.Form input[type="submit"] {
+  background-color: green;
 }
