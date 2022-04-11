@@ -36,14 +36,14 @@ export const Modal = (props) => {
       </div>
       <Button
         name="send"
-        click={props.click}
+        click={props.ok}
         color="green"
         style={classes.sendButton}
         text="Post note"
       />
       <Button
         name="cancel"
-        click={props.click}
+        click={props.cancel}
         color="tomato"
         style={classes.cancelButton}
         text="No, I don't want to post it."

@@ -31,11 +31,20 @@ class App extends Component {
     }
   };
 
+  closeHandler = (e) => {
+    e.target.parentNode.parentNode.children[1].style.pointerEvents = "auto";
+    window.location.reload();
+  };
+
   render() {
     return (
       <div className="app">
         {this.state.showModal && (
-          <Modal click={this.handleSubmit} {...this.state} />
+          <Modal
+            cancel={this.handleSubmit}
+            ok={this.closeHandler}
+            {...this.state}
+          />
         )}
         <Form submit={this.handleSubmit} change={this.handleChange} />
         <View {...this.state} />
