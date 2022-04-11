@@ -5,6 +5,7 @@ import classes from "./Modal.module.css";
 export const Modal = (props) => {
   return (
     <div className={classes.Modal}>
+      <h1>Your note: </h1>
       <div>
         <p className={classes.Heading}>Nickname: </p>
         <p className={classes.Input}>{props.nickname}</p>
@@ -38,14 +39,14 @@ export const Modal = (props) => {
         click={props.click}
         color="green"
         style={classes.sendButton}
-        text="send"
+        text="Post note"
       />
       <Button
         name="cancel"
         click={props.click}
         color="tomato"
         style={classes.cancelButton}
-        text="cancel"
+        text="No, I don't want to post it."
       />
     </div>
   );

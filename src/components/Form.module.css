@@ -1,6 +1,6 @@
 .Form {
   height: 50vh;
-  margin: 1rem;
+  margin: 1rem 0 1rem 1rem;
 }
 
 .Form label {
@@ -27,7 +27,6 @@
   height: 3rem;
 }
 
-.Form select,
 .Form input[type="submit"] {
   margin-left: 120px;
 }
