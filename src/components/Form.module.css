@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+
 .Form {
   height: 50vh;
-  margin: 1rem 0 1rem 1rem;
+  margin: 1rem 0 2rem 1rem;
+  font-family: "Source Serif Pro", serif;
 }
 
 .Form label {

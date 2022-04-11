@@ -10,7 +10,7 @@ class App extends Component {
     favouritemap: "",
     rank: "",
     telephone: "",
-    role: "Entry",
+    role: "",
     moreinfo: "",
     showModal: false,
   };

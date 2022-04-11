@@ -33,10 +33,11 @@ export const Form = (props) => {
       </div>
       <div>
         <label htmlFor="role">Role: </label>
-        <select id="role" name="role">
-          <option defaultValue="Entry" value="Entry">
-            Entry
+        <select id="role" name="role" required>
+          <option value="" invalid="true" hidden>
+            Select a role
           </option>
+          <option value="Entry">Entry</option>
           <option value="Lurker">Lurker</option>
           <option value="Support">Support</option>
         </select>
