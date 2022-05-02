@@ -3,21 +3,27 @@ import "./App.css";
 import { Form } from "./components/Form";
 import { View } from "./components/View";
 import { Modal } from "./components/Modal";
+import { Notelist } from "./components/Notelist";
+import axios from "axios";
 
 class App extends Component {
   state = {
-    nickname: "",
-    favouritemap: "",
-    rank: "",
-    telephone: "",
-    role: "",
-    moreinfo: "",
+    noteInfo: {
+      nickname: "",
+      favouritemap: "",
+      rank: "",
+      telephone: "",
+      role: "",
+      moreinfo: "",
+    },
     showModal: false,
   };
 
   handleChange = (e) => {
     e.preventDefault();
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({
+      noteInfo: { ...this.state.noteInfo, [e.target.name]: e.target.value },
+    });
   };
 
   handleSubmit = (e) => {
@@ -31,8 +37,11 @@ class App extends Component {
     }
   };
 
-  closeHandler = (e) => {
+  postHandler = (e) => {
     e.target.parentNode.parentNode.children[1].style.pointerEvents = "auto";
+    axios
+      .post("http://localhost:3001/notes/", { ...this.state.noteInfo })
+      .catch((err) => console.log(err));
     window.location.reload();
   };
 
@@ -42,12 +51,13 @@ class App extends Component {
         {this.state.showModal && (
           <Modal
             cancel={this.handleSubmit}
-            ok={this.closeHandler}
-            {...this.state}
+            ok={this.postHandler}
+            {...this.state.noteInfo}
           />
         )}
         <Form submit={this.handleSubmit} change={this.handleChange} />
-        <View {...this.state} />
+        <View {...this.state.noteInfo} />
+        <Notelist />
       </div>
     );
   }

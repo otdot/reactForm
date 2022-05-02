@@ -2,10 +2,12 @@
 
 .View {
   margin: 1rem;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   height: 70vh;
   width: 70vw;
-  position: relative;
+  top: 0;
+  right: 0;
+  position: absolute;
   color: black;
   font-family: "Nothing You Could Do", cursive;
   font-size: 1.4rem;
