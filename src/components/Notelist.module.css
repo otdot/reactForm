@@ -1,4 +1,5 @@
 .Notelist {
+  display: inline-block;
   background-color: white;
   padding: 1rem;
   position: absolute;
@@ -8,4 +9,8 @@
 
 .Notelist li {
   margin: 0.5rem;
+}
+
+.Notelist p {
+  display: inline-block;
 }

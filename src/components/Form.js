@@ -17,23 +17,42 @@ export const Form = (props) => {
           id="nickname"
           type="text"
           required
+          defaultValue={props.nickname}
         />
       </div>
       <div>
         <label htmlFor="favouritemap">Favourite map: </label>
-        <input name="favouritemap" id="favouritemap" type="text" required />
+        <input
+          name="favouritemap"
+          id="favouritemap"
+          type="text"
+          required
+          defaultValue={props.favouritemap}
+        />
       </div>
       <div>
         <label htmlFor="rank">Rank: </label>
-        <input name="rank" id="rank" type="text" required />
+        <input
+          name="rank"
+          id="rank"
+          type="text"
+          required
+          defaultValue={props.rank}
+        />
       </div>
       <div>
         <label htmlFor="telephone">Telephone: </label>
-        <input name="telephone" id="telephone" type="tel" required />
+        <input
+          name="telephone"
+          id="telephone"
+          type="tel"
+          required
+          defaultValue={props.telephone}
+        />
       </div>
       <div>
         <label htmlFor="role">Role: </label>
-        <select id="role" name="role" required>
+        <select id="role" name="role" required defaultValue={props.role}>
           <option value="" invalid="true" hidden>
             Select a role
           </option>
@@ -44,10 +63,16 @@ export const Form = (props) => {
       </div>
       <div>
         <label htmlFor="moreinfo">Game style: </label>
-        <textarea name="moreinfo" id="moreinfo" type="text" required />
+        <textarea
+          name="moreinfo"
+          id="moreinfo"
+          type="text"
+          required
+          defaultValue={props.moreinfo}
+        />
       </div>
       <div>
-        <input value="Send" type="submit" />
+        <input value={props.text} type="submit" />
       </div>
     </form>
   );

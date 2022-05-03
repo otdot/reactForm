@@ -4,6 +4,7 @@ import { Form } from "./components/Form";
 import { View } from "./components/View";
 import { Modal } from "./components/Modal";
 import { Notelist } from "./components/Notelist";
+import { UpdateForm } from "./components/UpdateForm";
 import axios from "axios";
 
 class App extends Component {
@@ -17,6 +18,16 @@ class App extends Component {
       moreinfo: "",
     },
     showModal: false,
+    showUpdateModal: false,
+    updateNote: {
+      id: "",
+      nickname: "",
+      favouritemap: "",
+      rank: "",
+      telephone: "",
+      role: "",
+      moreinfo: "",
+    },
   };
 
   handleChange = (e) => {
@@ -45,7 +56,29 @@ class App extends Component {
     window.location.reload();
   };
 
+  showUpdateHandler = (note) => {
+    this.setState({
+      updateNote: note,
+      showUpdateModal: !this.state.showUpdateModal,
+    });
+  };
+
+  updateHandler = (id) => {
+    console.log(id, this.state.updateNote);
+    axios
+      .put(`http://localhost:3001/notes/${id}`, this.state.updateNote)
+      .then((res) => res.data);
+  };
+
+  handleUpdateNote = (e) => {
+    e.preventDefault();
+    this.setState({
+      updateNote: { ...this.state.updateNote, [e.target.name]: e.target.value },
+    });
+  };
+
   render() {
+    console.log(this.state.updateNote.id);
     return (
       <div className="app">
         {this.state.showModal && (
@@ -55,9 +88,21 @@ class App extends Component {
             {...this.state.noteInfo}
           />
         )}
-        <Form submit={this.handleSubmit} change={this.handleChange} />
+        <Form
+          text="Send"
+          submit={this.handleSubmit}
+          change={this.handleChange}
+        />
         <View {...this.state.noteInfo} />
-        <Notelist />
+        <Notelist update={this.showUpdateHandler} />
+        {this.state.showUpdateModal && (
+          <UpdateForm
+            text="Update note"
+            {...this.state.updateNote}
+            submit={() => this.updateHandler(this.state.updateNote.id)}
+            change={this.handleUpdateNote}
+          />
+        )}
       </div>
     );
   }

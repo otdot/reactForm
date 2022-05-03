@@ -1,88 +1,22 @@
 {
   "notes": [
     {
-      "id": 1,
-      "nickname": "Pikachuplayer",
-      "favouritemap": "Dust2",
-      "rank": "dmg",
+      "nickname": "asdasd",
+      "favouritemap": "asdasd",
+      "rank": "asd",
+      "telephone": "asd",
+      "role": "Support",
+      "moreinfo": "asd",
+      "id": 1
+    },
+    {
+      "nickname": "Otto",
+      "favouritemap": "Camp Nou",
+      "rank": "Dmg",
       "telephone": "0401234567",
-      "role": "Lurker",
-      "gamestyle": "Aggressive"
-    },
-    {
-      "id": 2,
-      "nickname": "Simple",
-      "Favouritemap": "Mirage",
-      "rank": "Global elite",
-      "telephone": "0401234577",
       "role": "Support",
-      "gamestyle": "Supporting nades"
-    },
-    {
-      "id": 4,
-      "nickname": "PashaBiceps",
-      "Favouritemap": "Cache",
-      "rank": "Supreme",
-      "telephone": "0401234587",
-      "role": "Entry",
-      "gamestyle": "Aggressive"
-    },
-    {
-      "id": 5,
-      "nickname": "PashaBiceps",
-      "Favouritemap": "Cache",
-      "rank": "Supreme",
-      "telephone": "0401234587",
-      "role": "Entry",
-      "gamestyle": "Aggressive"
-    },
-    {
-      "nickname": "qwe",
-      "favouritemap": "qwe",
-      "rank": "qwe",
-      "telephone": "1123",
-      "role": "Lurker",
-      "moreinfo": "qwqe",
-      "showModal": true,
-      "id": 6
-    },
-    {
-      "nickname": "asd",
-      "favouritemap": "asd",
-      "rank": "asd",
-      "telephone": "123",
-      "role": "Lurker",
-      "moreinfo": "asd",
-      "showModal": true,
-      "id": 7
-    },
-    {
-      "nickname": "",
-      "favouritemap": "",
-      "rank": "",
-      "telephone": "",
-      "role": "",
-      "moreinfo": "",
-      "id": 8
-    },
-    {
-      "nickname": "asd",
-      "favouritemap": "asd",
-      "rank": "asd",
-      "telephone": "asd",
-      "role": "Lurker",
-      "moreinfo": "asd",
-      "showModal": true,
-      "id": 9
-    },
-    {
-      "nickname": "asd",
-      "favouritemap": "asd",
-      "rank": "asd",
-      "telephone": "asd",
-      "role": "Support",
-      "moreinfo": "asd",
-      "id": 10
+      "moreinfo": "Aggressive",
+      "id": 2
     }
   ]
 }

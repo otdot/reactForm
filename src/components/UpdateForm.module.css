@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+
+.UpdateForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(21, 21, 160);
+  height: 50vh;
+  margin: 1rem 0 2rem 1rem;
+  font-family: "Source Serif Pro", serif;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.UpdateForm label {
+  width: 120px;
+  display: inline-block;
+  color: white;
+}
+
+.UpdateForm div {
+  display: block;
+  margin: 1rem 0;
+}
+
+.UpdateForm input,
+.UpdateForm select,
+.UpdateForm textarea {
+  width: 12rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 5px;
+}
+
+.UpdateForm textarea {
+  height: 3rem;
+}
+
+.UpdateForm input[type="submit"] {
+  margin-left: 120px;
+}
+
+.UpdateForm input[type="submit"] {
+  background-color: green;
+}
