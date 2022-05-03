@@ -64,7 +64,6 @@ class App extends Component {
   };
 
   updateHandler = (id) => {
-    console.log(id, this.state.updateNote);
     axios
       .put(`http://localhost:3001/notes/${id}`, this.state.updateNote)
       .then((res) => res.data);
@@ -78,7 +77,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.updateNote.id);
     return (
       <div className="app">
         {this.state.showModal && (

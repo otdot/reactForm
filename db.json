@@ -17,6 +17,15 @@
       "role": "Support",
       "moreinfo": "Aggressive",
       "id": 2
+    },
+    {
+      "nickname": "Otto",
+      "favouritemap": "Mirage",
+      "rank": "DMG",
+      "telephone": "0401233456",
+      "role": "Lurker",
+      "moreinfo": "Aggressive",
+      "id": 3
     }
   ]
 }
